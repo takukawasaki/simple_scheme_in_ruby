@@ -127,3 +127,4 @@ def lepl
   end
 end
       
+(define y 1)
