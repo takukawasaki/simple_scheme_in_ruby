@@ -64,7 +64,7 @@ def _eval(x, env=$global_env)
     when :define
       _, var, exp = x
       env[var] = _eval(exp, env)
-      nil
+
     when :lambda
       _, vars, exp = x
       lambda {|*args| _eval(exp, Env.new(vars, args, env))}
@@ -127,4 +127,3 @@ def lepl
   end
 end
       
-(define y 1)
